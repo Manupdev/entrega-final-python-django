@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>
+      {%block titulo%}
+      Inicio
+      {% endblock %}
+    </title>
+</head>
+
+<header>
+    <div class="header">
+        <a href="#default" class="logo">CompanyLogo</a>
+        <div class="header-right">
+          <a href="#home">Prestamo</a>
+          <a href="#contact">Suscribirme</a>
+          <a href="#about">Informacion</a>
+        </div>
+      </div>
+</header>
+<body>
+{% block inicio %}
+
+{% include 'App1/inicio.html' %}
+
+{% endblock inicio %}
+
+</body>
+<footer>
+    <div class="header">
+        <a href="#default" class="logo">CompanyLogo</a>
+        <div class="header-right">
+          <a href="#home">Prestamo</a>
+          <a href="#contact">Suscribirme</a>
+          <a href="#about">Sobre Nosotros</a>
+          <a href="#about">Preguntas Frecuentes</a>
+          <a href="#about">Politicas de Privacidad</a>
+        </div>
+      </div>
+
+</footer>
+</html>

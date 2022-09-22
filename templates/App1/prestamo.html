@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block titulo %}
+
+Prestamo
+
+{% endblock titulo %}
+
+{% block inicio %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table>
+
+
+        {{prestamo.as_table}}
+
+    </table>
+
+    
+
+    <input type="submit", value="Enviar">
+
+</form>
+
+
+
+
+
+
+{% endblock inicio %}
+

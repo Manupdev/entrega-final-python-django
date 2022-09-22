@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block titulo %}
+
+Suscribirme
+
+{% endblock titulo %}
+
+{% block inicio %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table>
+
+
+        {{persona.as_table}}
+
+    </table>
+
+    
+
+    <input type="submit", value="Enviar">
+
+</form>
+
+
+
+
+
+
+{% endblock inicio %}
