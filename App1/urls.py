@@ -5,4 +5,5 @@ urlpatterns = [
     path('',inicio),
     path('prestamo/', prestamosForm),
     path('suscripcion/', suscripcionForm),
+    path('leerSusc/', leerSuscriptores),
 ]

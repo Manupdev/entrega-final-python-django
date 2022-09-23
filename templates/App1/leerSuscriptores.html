@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block titulo %}
+
+Suscriptores
+
+{% endblock titulo %}
+
+{% block inicio %}
+
+{% for p in suscriptores%}
+    <li>{{p}}</li>
+
+
+{% endfor %}
+
+
+
+
+
+
+{% endblock inicio %}

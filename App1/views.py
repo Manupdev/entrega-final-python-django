@@ -44,4 +44,10 @@ def prestamosForm(request):
         prestamo = PrestamoFormulario()
     return render(request, 'App1/prestamo.html', {'prestamo':prestamo})
 
+
+def leerSuscriptores(request):
+    suscriptores= Suscripcion.objects.all()
+    contexto={'suscriptores':suscriptores}
+
+    return render(request, 'App1/leerSuscriptores.html', contexto)
     
