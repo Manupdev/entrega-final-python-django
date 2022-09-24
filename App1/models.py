@@ -4,6 +4,8 @@ class Suscripcion(models.Model):
     nombreSuscripcion = models.CharField(max_length=40)
     apellidoSuscripcion = models.CharField(max_length=40)
     emailSuscripcion = models.EmailField()
+    dniSuscripciones1 = models.IntegerField(blank=True, default = 0)
+
 
 class Prestamo(models.Model):
     nombre = models.CharField(max_length=40)

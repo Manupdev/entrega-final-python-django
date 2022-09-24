@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block titulo %}
+
+Login
+{% endblock titulo %}
+
+{% block inicio %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table>
+
+
+        {{form.as_table}}
+
+    </table>
+
+    
+
+    <button type="submit">Iniciar Sesion </button>
+
+</form>
+
+
+
+
+
+
+{% endblock inicio %}
