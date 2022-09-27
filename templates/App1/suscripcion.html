@@ -8,19 +8,32 @@ Suscribirme
 
 {% block inicio %}
 
-<form action="" method="POST"> {% csrf_token %}
-
-    <table>
-
-
-        {{persona.as_table}}
-
-    </table>
-
+<form method ="POST" > {% csrf_token %}
+    <div class="form-row" >
+      <div class="form-group col-md-6" style=" display: flex;  align-items: center; justify-content: center">
+        <label for="inputEmail4">{{persona.nombreSuscripcion}}</label>
+        
+      </div>
+      <br>
+      <div class="form-group col-md-6" style=" display: flex;  align-items: center; justify-content: center">
+        <label for="inputPassword4">{{persona.apellidoSuscripcion}}</label>
+        
+      </div>
+      <br>
+    </div>
+    <div class="form-group col-md-6" style=" display: flex;  align-items: center; justify-content: center">
+      <label for="inputAddress">{{persona.emailSuscripcion}}</label>
+      
+    </div>
     
+    <br>
+    <br>
+    <br>
 
-    <input type="submit", value="Enviar">
-
+    <button type="submit" class="btn btn-primary" style=" padding: 0.5em 1em;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer">Registrarme</button>
 </form>
 
 

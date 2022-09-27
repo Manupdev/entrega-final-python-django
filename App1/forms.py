@@ -3,9 +3,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 class SuscripcionFormulario(forms.Form):
-    nombreSuscripcion = forms.CharField(max_length=40)
-    apellidoSuscripcion = forms.CharField(max_length=40)
-    emailSuscripcion = forms.EmailField()
+    nombreSuscripcion = forms.CharField(max_length=40, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Nombre'}) )
+    apellidoSuscripcion = forms.CharField(max_length=40, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Apellido'}) )
+    emailSuscripcion = forms.EmailField( widget=forms.EmailInput(attrs={'class':'form-control', 'placeholder':'E-Mail'}) )
     dniSuscripciones1 = forms.IntegerField()
     
 class PrestamoFormulario(forms.Form):
