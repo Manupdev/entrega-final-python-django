@@ -8,21 +8,66 @@ Prestamo
 
 {% block inicio %}
 
-<form action="" method="POST"> {% csrf_token %}
-
-    <table>
-
-
-        {{prestamo.as_table}}
-
-    </table>
-
+<form method ="POST" > {% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-md-6" style=" background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+        <label for="inputEmail4">{{prestamo.nombre}}</label>
+        
+      </div>
+      <br>
+      <div class="form-group col-md-6" style=" background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+        <label for="inputPassword4">{{prestamo.apellido}}</label>
+        
+      </div>
+      <br>
+    </div>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputAddress">{{prestamo.dni}}</label>
+      
+    </div>
+    <br>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputPassword4">{{prestamo.fecha}}</label>
+      
+    </div>
+    <br>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputPassword4">{{prestamo.genero}}</label>
+      
+    </div>
+    <br>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputPassword4">{{prestamo.situacion}}</label>
+      
+    </div>
+    <br>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputPassword4">{{prestamo.banco}}</label>
+      
+    </div>
+    <br>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputPassword4">{{prestamo.email}}</label>
+      
+    </div>
+    <br>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputPassword4">{{prestamo.telefono}}</label>
+      
+    </div>
+    <br>
+    <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+      <label for="inputPassword4">{{prestamo.cantidad}}</label>
+      
+    </div>
     
+    <br>
+    <br>
+    <br>
 
-    <input type="submit", value="Enviar">
-
+    <button type="submit" class="form-group col-md-2 btn btn-primary" 
+    style=" display: flex;  align-items: center; justify-content: center; margin-left : 540px">Solicitar</button>
 </form>
-
 
 
 

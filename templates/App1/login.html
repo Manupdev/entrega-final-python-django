@@ -4,22 +4,40 @@
 
 Login
 {% endblock titulo %}
+{% block tituloPortada %}
+
+<h1 class="display-4 fw-bolder">Ingresa a tu cuenta</h1>
+<p class="lead fw-normal text-white-50 mb-0">Registrate si todavia no lo estas</p>
+
+{% endblock tituloPortada %}
+
 
 {% block inicio %}
 
-<form action="" method="POST"> {% csrf_token %}
+<form method ="POST" > {% csrf_token %}
+    <div class="form-row" >
+      <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+        <label for="inputEmail4">USUARIO:   {{form.username}}</label>
+        
+      </div>
+      <br>
+      <div class="form-group col-md-6" style="background-color: lightblue; display: flex;  align-items: center; justify-content: center; margin-left : 300px">
+        <label for="inputPassword4">CONTRASEÑA: {{form.password}}</label>
+        
+      </div>
+      <br>
+    </div>
+   
+    <br>
+    <br>
 
-    <table>
+    <button type="submit" class="form-group col-md-2 btn btn-primary" 
+    style=" display: flex;  align-items: center; justify-content: center; margin-left : 540px">Log In</button>
 
+    <br>
+    <br>
 
-        {{form.as_table}}
-
-    </table>
-
-    
-
-    <button type="submit">Iniciar Sesion </button>
-
+    <a  style=" display: flex;  align-items: center; justify-content: center; margin-left : 0px" href="#!">Registrarme</a>
 </form>
 
 
