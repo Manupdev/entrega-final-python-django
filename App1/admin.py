@@ -5,3 +5,4 @@ from App1.models import Prestamo
 
 admin.site.register(Suscripcion)
 admin.site.register(Prestamo)
+

@@ -6,7 +6,7 @@ class SuscripcionFormulario(forms.Form):
     nombreSuscripcion = forms.CharField(max_length=40, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Nombre'}) )
     apellidoSuscripcion = forms.CharField(max_length=40, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Apellido'}) )
     emailSuscripcion = forms.EmailField( widget=forms.EmailInput(attrs={'class':'form-control', 'placeholder':'E-Mail'}) )
-    dniSuscripciones1 = forms.IntegerField()
+    contraSuscripcion = forms.CharField(max_length=40 , widget=forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'Contraseña'}))
     
 class PrestamoFormulario(forms.Form):
     nombre = forms.CharField(max_length=40, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Nombre'}))
@@ -21,15 +21,6 @@ class PrestamoFormulario(forms.Form):
     cantidad = forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Cantidad solicitada: '}))
     
 
-class UserRegisterForm(UserCreationForm):
 
-    email = forms.EmailField()
-    password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Repetir contrasñea', widget=forms.PasswordInput)
-
-    class Meta:
-        model = User 
-        fields = ['username', 'email', 'password1', 'password2']
-        help_text = {k:"" for k in fields}
 
 

@@ -4,7 +4,7 @@ class Suscripcion(models.Model):
     nombreSuscripcion = models.CharField(max_length=40)
     apellidoSuscripcion = models.CharField(max_length=40)
     emailSuscripcion = models.EmailField()
-    dniSuscripciones1 = models.IntegerField(blank=True, default = 0)
+    contraSuscripcion = models.CharField(max_length=40, blank=True)
 
     def __str__(self):
         return self.nombreSuscripcion + "-" + self.apellidoSuscripcion + "-" + self.emailSuscripcion
@@ -23,6 +23,5 @@ class Prestamo(models.Model):
     cantidad = models.IntegerField()
 
 
-    def __str__(self):
-        return self.nombre + "-" + self.apellido + "-" + self.dni
+    
     

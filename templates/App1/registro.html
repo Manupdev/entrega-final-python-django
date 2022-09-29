@@ -5,22 +5,20 @@
 Registro
 {% endblock titulo %}
 
+{% block tituloPortada %}
+
+<h1 class="display-4 fw-bolder">Bienvenido</h1>
+<p class="lead fw-normal text-white-50 mb-0"></p>
+
+{% endblock tituloPortada %}
+
 {% block inicio %}
 
-<form action="" method="POST"> {% csrf_token %}
-
-    <table>
+{% if suscripcionForm.is_authenticated %}
 
 
-        {{form.as_table}}
 
-    </table>
-
-    
-
-    <button type="submit">Registrate </button>
-
-</form>
+{% endif %}
 
 
 

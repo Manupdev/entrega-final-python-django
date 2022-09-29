@@ -8,7 +8,8 @@ from django.contrib.auth import login, logout, authenticate
 def inicio(request):
     return render(request,'index.html')
 
-
+def sobremi(request):
+    return render(request, 'App1/sobremi.html')
 
 
 def suscripcionForm(request):
@@ -19,7 +20,8 @@ def suscripcionForm(request):
         if persona.is_valid:
             informacion = persona.cleaned_data
 
-            usuario = Suscripcion (nombreSuscripcion= informacion['nombreSuscripcion'], apellidoSuscripcion = informacion['apellidoSuscripcion'], emailSuscripcion = informacion['emailSuscripcion'],)
+            usuario = Suscripcion (nombreSuscripcion= informacion['nombreSuscripcion'], apellidoSuscripcion = informacion['apellidoSuscripcion'], emailSuscripcion = informacion['emailSuscripcion'],
+            contraSuscripcion = informacion['contraSuscripcion'], )
             usuario.save()
         return render(request, 'index.html')
     
@@ -84,21 +86,7 @@ def login_request(request):
 
 
 
-def register(request):
 
-    if request.method == "POST":
-
-        form= UserRegisterForm(request.POST)
-        if form.is_valid():
-
-            username = form.cleaned_data['username']
-            form.save()
-            return render (request, 'index.html' , {'mensaje': 'usuario creado'})
-        
-    else:
-        form = UserRegisterForm()
-
-    return render(request, 'App1/registro.html', {'form': form})
 
 
     

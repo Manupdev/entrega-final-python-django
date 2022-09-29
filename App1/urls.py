@@ -8,7 +8,7 @@ urlpatterns = [
     path('suscripcion/', suscripcionForm),
     path('leerSusc/', leerSuscriptores),
     path('login/',login_request),
-    path('registro/', register),
     path('logout/', LogoutView.as_view(template_name = 'App1/logout.html')),
+    path('informacion/', sobremi),
     
 ]
